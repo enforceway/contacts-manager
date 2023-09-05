@@ -1,4 +1,4 @@
-package com.enforceway.contactsmanager;
+package com.enforceway.application.contactsmanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

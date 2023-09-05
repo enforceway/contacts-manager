@@ -23,7 +23,7 @@ spring:
 
 
   resources:
-    static-locations=file:D:\\downloads\\java1234\\
+    static-locations=file:D:\\espace\\practice\\contacts-manager\\src\\main\\resources\\static\\image
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:
@@ -34,4 +34,5 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:mybatis/mappers/*.xml
   configuration:
-    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: false
