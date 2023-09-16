@@ -4,8 +4,6 @@ import com.enforceway.application.entity.CheckResult;
 import com.enforceway.application.entity.R;
 import com.enforceway.application.utils.JwtUtils;
 import com.enforceway.application.utils.StringUtil;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -14,6 +12,8 @@ import org.springframework.web.servlet.HandlerInterceptor;
 
 import com.enforceway.application.constants.SystemConstant;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 

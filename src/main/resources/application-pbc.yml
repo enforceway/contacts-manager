@@ -9,10 +9,12 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_phonebook?serverTimezone=GMT
-    username: root
-    password: root
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/../data/db_phonebook
+    username: sa
+    password: sa
+    #schema: classpath:com/enforceway/db/schema.sql
+    #data: classpath:com/enforceway/db/data.sql
     druid:
       web-stat-filter:
         enabled: true
@@ -20,12 +22,15 @@ spring:
         enabled: true
         login-username: admin
         login-password: admin
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
 
-
-  resources:
-    static-locations=file:D:\\espace\\practice\\contacts-manager\\src\\main\\resources\\static
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #resources:
+    #static-locations=file:D:\\espace\\practice\\contacts-manager\\src\\main\\resources\\static
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:
     db-config:
       id-type: input
@@ -34,5 +39,5 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:mybatis/mappers/*.xml
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: false
