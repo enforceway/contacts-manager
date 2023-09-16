@@ -21,7 +21,6 @@ spring:
         login-username: admin
         login-password: admin
 
-
   resources:
     static-locations=file:D:\\espace\\practice\\contacts-manager\\src\\main\\resources\\static
   configuration:
@@ -31,8 +30,20 @@ spring:
       id-type: input
       update-strategy: not_null
 #  config-location: classpath:mybatis/config/mybatis-config.xml
+# mybatis property is the configuration for mybatis
+# mybatis-plus property is the configuration for mybatis-plus
 mybatis-plus:
   mapper-locations: classpath:mybatis/mappers/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: false
+
+debug: true
+logging:
+  #  config: classpath:logback-spring.xml
+  level:
+    web: trace
+    root: info
+    server: debug
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{50}:%line %msg%n'

@@ -26,6 +26,9 @@ spring:
     console:
       path: /h2-console
       enabled: true
+      settings:
+        trace: true
+        web-allow-others: true
 
     #resources:
     #static-locations=file:D:\\espace\\practice\\contacts-manager\\src\\main\\resources\\static

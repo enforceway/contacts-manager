@@ -1,0 +1,2 @@
+To run command `java -jar h2-version.jar` start connection to H2 database
+
